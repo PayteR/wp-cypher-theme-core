@@ -1,23 +1,33 @@
 {
-    "name": "payter/wp-cypher-theme-core",
-    "type": "library",
-    "description": "Core functionality for Cypher Wordpress theme",
-    "keywords": ["wordpress"],
-    "homepage": "https://github.com/PayteR/wp-cypher-theme-core",
-    "license": "MIT",
-    "authors": [
-        {
-            "name": "Peter \"PayteR\" Gašparík",
-            "homepage": "https://github.com/PayteR",
-            "role": "Developer"
-        }
-    ],
-    "require": {
-        "php": ">=7.1.0"
-    },
-    "autoload": {
-        "psr-0": {
-            "Cypher": "src"
-        }
+  "name": "payter/wp-cypher-theme-core",
+  "type": "library",
+  "description": "Core functionality for Cypher Wordpress theme",
+  "keywords": [
+    "wordpress"
+  ],
+  "homepage": "https://github.com/PayteR/wp-cypher-theme-core",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Peter \"PayteR\" Gašparík",
+      "homepage": "https://github.com/PayteR",
+      "role": "Developer"
     }
+  ],
+  "require": {
+    "php": ">=7.1",
+    "composer/installers": "~1.0",
+    "illuminate/support": "5.6.*",
+    "roots/sage-lib": "~9.0.9",
+    "soberwp/controller": "~2.1.0"
+  },
+  "require-dev": {
+    "squizlabs/php_codesniffer": "^2.8.0",
+    "roots/sage-installer": "~1.6"
+  },
+  "autoload": {
+    "psr-0": {
+      "Cypher": "src"
+    }
+  }
 }
