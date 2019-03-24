@@ -26,6 +26,10 @@
   "autoload": {
     "psr-0": {
       "Cypher": "src"
-    }
+    },
+    "files": [
+      "src/compatibility.php",
+      "src/helpers.php"
+    ]
   }
 }
