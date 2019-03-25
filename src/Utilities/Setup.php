@@ -69,11 +69,11 @@ class Setup
              * @link https://developer.wordpress.org/reference/functions/register_nav_menus/
              */
             register_nav_menus([
-                'primary_navigation' => __('Primary Navigation', 'sage'),
+                'primary_navigation' => __('Primary Navigation', 'cypher'),
             ]);
 
             register_nav_menus([
-                'footer_navigation' => __('Footer Navigation', 'sage'),
+                'footer_navigation' => __('Footer Navigation', 'cypher'),
             ]);
 
             /**
@@ -137,11 +137,11 @@ class Setup
                 'after_title' => '</h3>',
             ];
             register_sidebar([
-                    'name' => __('Primary', 'sage'),
+                    'name' => __('Primary', 'cypher'),
                     'id' => 'sidebar-primary',
                 ] + $config);
             register_sidebar([
-                    'name' => __('Footer', 'sage'),
+                    'name' => __('Footer', 'cypher'),
                     'id' => 'sidebar-footer',
                 ] + $config);
         };

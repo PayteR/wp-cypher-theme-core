@@ -14,7 +14,7 @@ use Roots\Sage\Container;
  * @param string $title
  */
 $cypher_error = function ($message, $subtitle = '', $title = '') {
-    $title = $title ?: __('Sage &rsaquo; Error', 'sage');
+    $title = $title ?: __('Cypher &rsaquo; Error', 'cypher');
     $footer = '<a href="https://roots.io/sage/docs/">roots.io/sage/docs/</a>';
     $message = "<h1>{$title}<br><small>{$subtitle}</small></h1><p>{$message}</p><p>{$footer}</p>";
     wp_die($message, $title);
@@ -24,35 +24,14 @@ $cypher_error = function ($message, $subtitle = '', $title = '') {
  * Ensure compatible version of PHP is used
  */
 if (version_compare('7.1', phpversion(), '>=')) {
-    $cypher_error(__('You must be using PHP 7.1 or greater.', 'sage'), __('Invalid PHP version', 'sage'));
+    $cypher_error(__('You must be using PHP 7.1 or greater.', 'cypher'), __('Invalid PHP version', 'cypher'));
 }
 
 /**
  * Ensure compatible version of WordPress is used
  */
 if (version_compare('4.7.0', get_bloginfo('version'), '>=')) {
-    $cypher_error(__('You must be using WordPress 4.7.0 or greater.', 'sage'), __('Invalid WordPress version', 'sage'));
-}
-
-/**
- * Ensure dependencies are loaded
- */
-if (!class_exists('Roots\\Sage\\Container')) {
-    if (!file_exists($composer = __DIR__.'/../vendor/autoload.php')) {
-        $cypher_error(
-            __('You must run <code>composer install</code> from parent directory.', 'sage'),
-            __('Autoloader not found.', 'sage')
-        );
-    }
-    require_once $composer;
-
-    if (!file_exists($composer = get_theme_file_path().'/vendor/autoload.php')) {
-        $cypher_error(
-            __('You must run <code>composer install</code> from child directory.', 'sage'),
-            __('Autoloader not found.', 'sage')
-        );
-    }
-    require_once $composer;
+    $cypher_error(__('You must be using WordPress 4.7.0 or greater.', 'cypher'), __('Invalid WordPress version', 'cypher'));
 }
 
 /**
@@ -79,7 +58,9 @@ if (!function_exists('include_parent_file')) {
     }
 }
 
-
+/**
+ * Fix for multisite directory uri
+ */
 if(MULTISITE && !function_exists('stylesheet_directory_multisite_fix')) {
     function stylesheet_directory_multisite_fix( $stylesheet_dir_uri )
     {
@@ -89,21 +70,6 @@ if(MULTISITE && !function_exists('stylesheet_directory_multisite_fix')) {
     }
     add_filter('stylesheet_directory_uri', 'stylesheet_directory_multisite_fix');
 }
-
-/**
- * Sage required files
- *
- * The mapped array determines the code library included in your theme.
- * Add or remove files to the array as needed. Supports child theme overrides.
- */
-array_map(function ($file) use ($cypher_error) {
-    $file = "../app/{$file}.php";
-    if (!locate_template($file, true, true)) {
-        $cypher_error(sprintf(__('Error locating <code>%s</code> for inclusion.', 'sage'), $file), 'File not found');
-    }
-}, ['helpers', 'setup', 'fixes', 'filters', 'admin', 'gutenberg']);
-
-
 
 Container::getInstance()
     ->bindIf('config', function () {

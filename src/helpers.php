@@ -3,7 +3,7 @@
 use Roots\Sage\Container;
 
 /**
- * Get the sage container.
+ * Get the cypher container.
  *
  * @param string $abstract
  * @param array  $parameters
@@ -18,7 +18,7 @@ function cypher($abstract = null, $parameters = [], Container $container = null)
     }
     return $container->bound($abstract)
         ? $container->makeWith($abstract, $parameters)
-        : $container->makeWith("sage.{$abstract}", $parameters);
+        : $container->makeWith("cypher.{$abstract}", $parameters);
 }
 
 /**
@@ -80,7 +80,7 @@ function asset_path($asset)
  */
 function filter_templates($templates)
 {
-    $paths = apply_filters('sage/filter_templates/paths', [
+    $paths = apply_filters('cypher/filter_templates/paths', [
         'views',
         'resources/views'
     ]);
@@ -120,7 +120,7 @@ function filter_templates($templates)
  * @param string|string[] $templates Relative path to possible template files
  * @return string Location of the template
  */
-function locate_template($templates)
+function cypher_locate_template($templates)
 {
     return \locate_template(filter_templates($templates));
 }

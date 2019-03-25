@@ -2,9 +2,6 @@
 
 namespace Cypher\Utilities;
 
-
-use function App\asset_path;
-
 class Customizer
 {
     /**
@@ -29,7 +26,7 @@ class Customizer
          * Customizer JS
          */
         add_action('customize_preview_init', function () {
-            wp_enqueue_script('sage/customizer.js', asset_path('scripts/customizer.js'), ['customize-preview'], null,
+            wp_enqueue_script('cypher/customizer.js', asset_path('scripts/customizer.js'), ['customize-preview'], null,
                 true);
         });
     }

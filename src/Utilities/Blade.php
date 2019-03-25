@@ -32,16 +32,16 @@ class Blade
 
 
         /**
-         * Add JsonManifest to Sage container
+         * Add JsonManifest to Cypher container
          */
-        cypher()->singleton('sage.assets', function () {
+        cypher()->singleton('cypher.assets', function () {
             return new JsonManifest(config('assets.manifest'), config('assets.uri'));
         });
 
         /**
-         * Add Blade to Sage container
+         * Add Blade to Cypher container
          */
-        cypher()->singleton('sage.blade', function (Container $app) {
+        cypher()->singleton('cypher.blade', function (Container $app) {
             $cachePath = config('view.compiled');
             if (!file_exists($cachePath)) {
                 wp_mkdir_p($cachePath);

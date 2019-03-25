@@ -41,7 +41,7 @@ class Template
     public static function excerpt ()
     {
         add_filter('excerpt_more', function () {
-            return ' &hellip; <a href="' . get_permalink() . '">' . __('Continued', 'sage') . '</a>';
+            return ' &hellip; <a href="' . get_permalink() . '">' . __('Continued', 'cypher') . '</a>';
         });
     }
 
@@ -89,7 +89,7 @@ class Template
                 });
             });
             $data = collect(get_body_class())->reduce(function ($data, $class) use ($template) {
-                return apply_filters("sage/template/{$class}/data", $data, $template);
+                return apply_filters("cypher/template/{$class}/data", $data, $template);
             }, []);
             if ($template) {
                 echo template($template, $data);
@@ -117,10 +117,10 @@ class Template
             );
 
             $data = collect(get_body_class())->reduce(function ($data, $class) use ($comments_template) {
-                return apply_filters("sage/template/{$class}/data", $data, $comments_template);
+                return apply_filters("cypher/template/{$class}/data", $data, $comments_template);
             }, []);
 
-            $theme_template = locate_template(["views/{$comments_template}", $comments_template]);
+            $theme_template = cypher_locate_template(["views/{$comments_template}", $comments_template]);
 
             if ($theme_template) {
                 echo template($theme_template, $data);
