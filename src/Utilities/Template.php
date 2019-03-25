@@ -69,7 +69,8 @@ class Template
             'attachment',
             'embed'
         ])->map(function ($type) {
-            add_filter("{$type}_template_hierarchy", __NAMESPACE__ . '\\filter_templates');
+            add_filter("{$type}_template_hierarchy", 'filter_templates');
+            add_filter("{$type}_template", 'filter_templates_vendor', 10, 3);
         });
     }
 
@@ -89,7 +90,7 @@ class Template
                 });
             });
             $data = collect(get_body_class())->reduce(function ($data, $class) use ($template) {
-                return apply_filters("cypher/template/{$class}/data", $data, $template);
+                return apply_filters("app/template/{$class}/data", $data, $template);
             }, []);
             if ($template) {
                 echo template($template, $data);

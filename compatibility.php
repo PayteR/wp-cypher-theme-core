@@ -71,6 +71,13 @@ if(MULTISITE && !function_exists('stylesheet_directory_multisite_fix')) {
     add_filter('stylesheet_directory_uri', 'stylesheet_directory_multisite_fix');
 }
 
+/**
+ * Sage default controller backward compatibility fix
+ */
+add_filter('sober/controller/sage/namespace', function(){
+    return '';
+});
+
 Container::getInstance()
     ->bindIf('config', function () {
         $files = [];

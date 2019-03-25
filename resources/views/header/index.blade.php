@@ -20,7 +20,7 @@
                 'theme_location' => 'primary_navigation',
                 'container' => false,
                 'items_wrap' => '%3$s',
-                'walker' => new App\Cypher\NavWalker()
+                'walker' => new Cypher\NavWalker()
             ]) !!}
           @endif
         </div>

@@ -2,6 +2,7 @@
 
 use Roots\Sage\Container;
 
+
 /**
  * Get the cypher container.
  *
@@ -19,6 +20,18 @@ function cypher($abstract = null, $parameters = [], Container $container = null)
     return $container->bound($abstract)
         ? $container->makeWith($abstract, $parameters)
         : $container->makeWith("cypher.{$abstract}", $parameters);
+}
+
+/**
+ * Just alias for backward compatibility
+ *
+ * @param null $abstract
+ * @param array $parameters
+ * @param Container|null $container
+ * @return mixed|Container
+ */
+function sage($abstract = null, $parameters = [], Container $container = null) {
+    return cypher($abstract, $parameters, $container);
 }
 
 /**
@@ -81,8 +94,9 @@ function asset_path($asset)
 function filter_templates($templates)
 {
     $paths = apply_filters('cypher/filter_templates/paths', [
+        'resources/views',
         'views',
-        'resources/views'
+        ''
     ]);
     $paths_pattern = "#^(" . implode('|', $paths) . ")/#";
 
@@ -101,19 +115,42 @@ function filter_templates($templates)
         ->flatMap(function ($template) use ($paths) {
             return collect($paths)
                 ->flatMap(function ($path) use ($template) {
+                    $path = $path ? $path . '/' : '';
                     return [
-                        "{$path}/{$template}.blade.php",
-                        "{$path}/{$template}.php",
+                        "{$path}{$template}.blade.php",
+                        "{$path}{$template}.php",
                     ];
-                })
-                ->concat([
-                    "{$template}.blade.php",
-                    "{$template}.php",
-                ]);
+                });
         })
         ->filter()
         ->unique()
         ->all();
+}
+
+/**
+ * @param string $template
+ * @param null $type
+ * @param string|string[] $templates Possible template files
+ * @return string
+ */
+function filter_templates_vendor($template = '', $type = null, $templates = [])
+{
+    if($template || !$type || !count($templates)) {
+        return $template;
+    }
+
+    $located = '';
+    foreach ( (array) $templates as $template_name ) {
+        if ( ! $template_name ) {
+            continue;
+        }
+        if ( file_exists( __DIR__ . '/' . $template_name ) ) {
+            $located = __DIR__ . '/' . $template_name;
+            break;
+        }
+    }
+
+    return $located;
 }
 
 /**
