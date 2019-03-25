@@ -12,8 +12,8 @@ namespace Cypher\Utilities;
 
 use Roots\Sage\Container;
 use Roots\Sage\Assets\JsonManifest;
-use Roots\Sage\Template\Blade as BladeBase;
-use Roots\Sage\Template\BladeProvider;
+use Cypher\Template\Blade as BladeBase;
+use Cypher\Template\BladeProvider;
 
 class Blade
 {
@@ -49,6 +49,16 @@ class Blade
             (new BladeProvider($app))->register();
 
             return new BladeBase($app['view']);
+        });
+
+        /**
+         * Create Brain\Hierarchy class
+         */
+        cypher()->singleton('cypher.hierarchy', function (Container $app) {
+            global $wp_query; // we will target the main query
+            $hierarchy = new \Brain\Hierarchy\Hierarchy($wp_query);
+            $hierarchy->getTemplates($wp_query);
+            return $hierarchy;
         });
 
         /**

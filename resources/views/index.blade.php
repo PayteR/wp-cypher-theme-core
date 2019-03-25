@@ -11,7 +11,7 @@
   @endif
 
   @while (have_posts()) @php the_post() @endphp
-    @include('content.index-'.get_post_type())
+    @include('content.')
   @endwhile
 
   {!! get_the_posts_navigation() !!}
