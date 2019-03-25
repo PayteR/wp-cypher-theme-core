@@ -24,12 +24,12 @@
   "require-dev": {
   },
   "autoload": {
-    "psr-0": {
+    "psr-4": {
       "Cypher\\": "src"
     },
     "files": [
-      "src/compatibility.php",
-      "src/helpers.php"
+      "compatibility.php",
+      "helpers.php"
     ]
   }
 }

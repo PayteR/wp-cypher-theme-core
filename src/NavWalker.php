@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Cypher;
+namespace Cypher;
 
 /**
  * Custom Navwalker Class
