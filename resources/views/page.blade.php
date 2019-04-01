@@ -7,5 +7,5 @@
 @endsection
 
 @section('sidebar')
-  @include('sidebar.index')
+  @include('sidebar.')
 @endsection

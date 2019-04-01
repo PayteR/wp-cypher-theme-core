@@ -2,7 +2,6 @@
 
 use Roots\Sage\Container;
 
-
 /**
  * Get the cypher container.
  *

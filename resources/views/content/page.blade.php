@@ -1,5 +1,5 @@
 <article @php post_class() @endphp>
-  @if(App::title())
+  @if (App::title() || Cypher\display_title())
   <header>
     @include('partials.page-header')
   </header>

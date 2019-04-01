@@ -29,7 +29,8 @@
     },
     "files": [
       "compatibility.php",
-      "helpers.php"
+      "helpers.php",
+      "template.php"
     ]
   }
 }

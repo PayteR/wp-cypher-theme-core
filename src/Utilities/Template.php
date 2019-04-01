@@ -46,6 +46,43 @@ class Template
     }
 
     /**
+     * Browser not support notification to obsolete browsers
+     */
+    public static function browserSupportNotification ()
+    {
+        add_action('get_header', function () {
+            ?><div class="container">
+                <div class="notification is-danger is-browsersupport">
+                    <?= __('You are using an <strong>outdated</strong> browser, you may experience issues.
+                Please <a href="http://browsehappy.com/" target="_blank">upgrade your browser</a> to
+                improve your experience.', 'cypher') ?>
+                </div>
+            </div><?php
+        });
+    }
+
+    /**
+     * Browser not support notification to obsolete browsers
+     */
+    public static function privacyPolicyPanel ()
+    {
+        add_action('get_header', function () {
+            $privacy_page = \get_option('wp_page_for_privacy_policy');
+
+            if(!$privacy_page) return;
+
+            get_the_permalink($privacy_page)
+            ?><div class="privacy_policy">
+                <div class="privacy_policy-container container">
+                <p class="privacy_policy-message"><?= sprintf( __('We use cookies on our site to improve your experience of our site. By clicking on, and continuing to use this site you consent for us to set cookies in accordance with your current browser settings. Find out more in our <a href="%s" target="_blank">Cookies Policy</a>', 'cypher'), $privacy_page) ?>.</p>
+                <button type="button" class="privacy_policy-button button is-primary"><?= __('Close', 'cypher') ?></button>
+                </div>
+            </div><?php
+
+        });
+    }
+
+    /**
      * Template Hierarchy should search for .blade.php files
      */
     public static function templateHierarchy ()

@@ -1,8 +1,7 @@
 <article @php post_class() @endphp>
-  @if(App::title())
+  @if (App::title() && Cypher\display_title())
   <header>
-    <h1 class="entry-title">{!! get_the_title() !!}</h1>
-    @include('partials/entry-meta')
+    @include('partials.post-header')
   </header>
   @endif
   <div class="entry-content">
