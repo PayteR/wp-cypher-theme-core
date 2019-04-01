@@ -57,14 +57,14 @@ class Metas
 
 
         add_filter('cypher/display_sidebar', function ($display) {
-            $value = carbon_get_the_post_meta(CYPHER_OPTION_DISPLAY_TITLE);
-            $display = $value === null ? $display : $value;
+            $value = carbon_get_the_post_meta(CYPHER_OPTION_DISPLAY_SIDEBAR);
+            $display = $value === "" || $value === null ? $display : $value;
             return $display;
         });
 
         add_filter('cypher/display_title', function ($display) {
             $value = carbon_get_the_post_meta(CYPHER_OPTION_DISPLAY_TITLE);
-            $display = $value === null ? $display : $value;
+            $display = $value === "" || $value === null ? $display : $value;
             return $display;
         });
 
