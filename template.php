@@ -30,12 +30,37 @@ function display_title($default = null)
 
 
 /**
- * @param string|string[] $templates Relative path to possible template files
+ * This is rewrite of locate_template function to locate vendor templates
+ *
+ * @param string|string[] $template_names Relative path to possible template files
  * @return string Location of the template
  */
-function locate_template($templates)
+function locate_template($template_names)
 {
-    return \locate_template(filter_templates($templates));
+    $template_names = filter_templates($template_names);
+
+    $located = '';
+    foreach ( (array) $template_names as $template_name ) {
+        if ( ! $template_name ) {
+            continue;
+        }
+
+        if ( file_exists( STYLESHEETPATH . '/' . $template_name ) ) {
+            $located = STYLESHEETPATH . '/' . $template_name;
+            break;
+        } elseif ( file_exists( TEMPLATEPATH . '/' . $template_name ) ) {
+            $located = TEMPLATEPATH . '/' . $template_name;
+            break;
+        } elseif ( file_exists( __DIR__ . '/' . $template_name ) ) {
+            $located = __DIR__ . '/' . $template_name;
+            break;
+        } elseif ( file_exists( ABSPATH . WPINC . '/theme-compat/' . $template_name ) ) {
+            $located = ABSPATH . WPINC . '/theme-compat/' . $template_name;
+            break;
+        }
+    }
+
+    return $located;
 }
 
 
