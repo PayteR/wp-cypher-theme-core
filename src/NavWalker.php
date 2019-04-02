@@ -86,7 +86,7 @@ class NavWalker extends \Walker_Nav_Menu
 
         $dropdown = sprintf("<div class='navbar-item has-dropdown is-hoverable'>%s", $button);
 
-        $dropdown .= "<div class='navbar-dropdown is-boxed'>";
+        $dropdown .= "<div class='navbar-dropdown'>";
         return $dropdown;
     }
 

@@ -27,3 +27,14 @@ function display_title($default = null)
 
     return $display;
 }
+
+/**
+ * Determine whether Woocommerce is activated
+ * https://docs.woocommerce.com/document/query-whether-woocommerce-is-activated/
+ *
+ * @return bool
+ */
+function is_woocommerce_activated()
+{
+    return class_exists( '\WooCommerce' );
+}

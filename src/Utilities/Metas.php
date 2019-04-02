@@ -38,6 +38,7 @@ class Metas
         Container::make('post_meta',  __( 'Layout options' ))
             ->set_context('side')
             ->set_priority('low')
+            ->set_revisions_disabled(true)
             ->add_fields(array(
                 Field::make( 'select', CYPHER_OPTION_DISPLAY_TITLE, __( 'Display title' ) )
                     ->set_default_value( null )

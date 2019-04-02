@@ -1,8 +1,12 @@
+@include('partials.header-contacts')
 <header class="header">
-  <nav class="navbar is-primary" role="navigation" aria-label="main navigation">
-    <div class="container">
+  @php $is_cart = Cypher\is_woocommerce_activated() @endphp
+  <nav class="navbar {{ $is_cart ? 'is-cart' : '' }}" role="navigation" aria-label="main navigation">
+    <div class="container is-tablet-only-padding">
       <div class="navbar-brand">
         @include('partials.logo')
+
+        @includeWhen($is_cart, 'header.partials.cart-mobile')
 
         <a role="button" class="navbar-burger" aria-label="menu" data-target="primary_navigation"
            aria-expanded="false">
@@ -24,6 +28,8 @@
             ]) !!}
           @endif
         </div>
+
+        @includeWhen($is_cart, 'header.partials.cart')
       </div>
     </div>
   </nav>
