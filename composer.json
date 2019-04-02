@@ -30,7 +30,8 @@
     "files": [
       "compatibility.php",
       "helpers.php",
-      "template.php"
+      "template.php",
+      "woocommerce.php"
     ]
   }
 }

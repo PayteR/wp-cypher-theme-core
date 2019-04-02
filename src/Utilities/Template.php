@@ -158,7 +158,7 @@ class Template
                 return apply_filters("cypher/template/{$class}/data", $data, $comments_template);
             }, []);
 
-            $theme_template = cypher_locate_template(["views/{$comments_template}", $comments_template]);
+            $theme_template = \Cypher\locate_template(["views/{$comments_template}", $comments_template]);
 
             if ($theme_template) {
                 echo template($theme_template, $data);

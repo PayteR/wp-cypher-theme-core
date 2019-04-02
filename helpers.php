@@ -151,12 +151,3 @@ function filter_templates_vendor($template = '', $type = null, $templates = [])
 
     return $located;
 }
-
-/**
- * @param string|string[] $templates Relative path to possible template files
- * @return string Location of the template
- */
-function cypher_locate_template($templates)
-{
-    return \locate_template(filter_templates($templates));
-}

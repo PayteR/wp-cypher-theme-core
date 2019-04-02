@@ -28,6 +28,17 @@ function display_title($default = null)
     return $display;
 }
 
+
+/**
+ * @param string|string[] $templates Relative path to possible template files
+ * @return string Location of the template
+ */
+function locate_template($templates)
+{
+    return \locate_template(filter_templates($templates));
+}
+
+
 /**
  * Determine whether Woocommerce is activated
  * https://docs.woocommerce.com/document/query-whether-woocommerce-is-activated/
