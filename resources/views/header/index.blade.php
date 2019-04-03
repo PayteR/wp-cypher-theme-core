@@ -1,4 +1,4 @@
-@include('partials.header-contacts')
+@include('header.before.')
 <header class="header">
   @php $is_cart = Cypher\is_woocommerce_activated() @endphp
   <nav class="navbar {{ $is_cart ? 'is-cart' : '' }}" role="navigation" aria-label="main navigation">
@@ -34,3 +34,4 @@
     </div>
   </nav>
 </header>
+@include('header.after.')

@@ -18,7 +18,7 @@ the readme will list any important changes.
 
 @section('content')
   @php
-    do_action('get_header', 'shop');
+    //do_action('get_header', 'shop');
     do_action('woocommerce_before_main_content');
   @endphp
 
@@ -60,7 +60,7 @@ the readme will list any important changes.
 
   @php
     do_action('woocommerce_after_main_content');
-    do_action('get_sidebar', 'shop');
-    do_action('get_footer', 'shop');
+    //do_action('get_sidebar', 'shop');
+    //do_action('get_footer', 'shop');
   @endphp
 @endsection

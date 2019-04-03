@@ -74,3 +74,17 @@ function is_woocommerce_activated()
 {
     return class_exists( '\WooCommerce' );
 }
+/**
+ * Determine whether is current page Woocomerce page
+ * https://docs.woocommerce.com/document/query-whether-woocommerce-is-activated/
+ *
+ * @return bool
+ */
+function is_woocommerce_current()
+{
+    if(!is_woocommerce_activated()) {
+        return false;
+    }
+
+    return is_woocommerce() || is_checkout() || is_cart() || is_account_page();
+}

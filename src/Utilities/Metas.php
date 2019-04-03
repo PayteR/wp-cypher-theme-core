@@ -51,23 +51,28 @@ class Metas
                     ->set_default_value( null )
                     ->set_options( array(
                         null => __( 'Default by theme' ),
-                        true => __( 'Display' ),
+                        'right' => __( 'Display right' ),
+                        'left' => __( 'Display left' ),
                         false => __( 'Hide' )
                     ) )
             ));
 
 
         add_filter('cypher/display_sidebar', function ($display) {
+            if($display === null) return $display;
+
             $value = carbon_get_the_post_meta(CYPHER_OPTION_DISPLAY_SIDEBAR);
             $display = $value === "" || $value === null ? $display : $value;
             return $display;
-        });
+        }, PHP_INT_MAX);
 
         add_filter('cypher/display_title', function ($display) {
+            if($display === null) return $display;
+
             $value = carbon_get_the_post_meta(CYPHER_OPTION_DISPLAY_TITLE);
             $display = $value === "" || $value === null ? $display : $value;
             return $display;
-        });
+        }, PHP_INT_MAX);
 
     }
 }

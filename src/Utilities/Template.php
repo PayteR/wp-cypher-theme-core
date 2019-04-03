@@ -26,6 +26,10 @@ class Template
                 }
             }
 
+            if($position = \Cypher\display_sidebar()) {
+                $classes[] = 'is-sidebar-' . $position;
+            }
+
             /** Clean up class names for custom templates */
             $classes = array_map(function ($class) {
                 return preg_replace(['/-blade(-php)?$/', '/^page-template-views/'], '', $class);
@@ -38,7 +42,7 @@ class Template
     /**
      * Add "… Continued" to the excerpt
      */
-    public static function excerpt ()
+    public static function excerpt()
     {
         add_filter('excerpt_more', function () {
             return ' &hellip; <a href="' . get_permalink() . '">' . __('Continued', 'cypher') . '</a>';
