@@ -61,36 +61,36 @@ if (!function_exists('include_parent_file')) {
 /**
  * Fix for multisite directory uri
  */
-if(MULTISITE && !function_exists('stylesheet_directory_multisite_fix')) {
-    function stylesheet_directory_multisite_fix( $stylesheet_dir_uri )
-    {
-        $parsed_url = parse_url($stylesheet_dir_uri);
-        $query = $parsed_url['query'] ?? '';
-        return home_url($parsed_url['path'] .  $query);
-    }
-    add_filter('stylesheet_directory_uri', 'stylesheet_directory_multisite_fix');
-}
-
-if(MULTISITE && !function_exists('plugins_url_fix')) {
-    function plugins_url_fix( $url )
-    {
-        $parsed_url = parse_url($url);
-        $query = $parsed_url['query'] ?? '';
-        return home_url($parsed_url['path'] .  $query);
-    }
-    add_filter('plugins_url', 'plugins_url_fix');
-}
+//if(MULTISITE && !function_exists('stylesheet_directory_multisite_fix')) {
+//    function stylesheet_directory_multisite_fix( $stylesheet_dir_uri )
+//    {
+//        $parsed_url = parse_url($stylesheet_dir_uri);
+//        $query = $parsed_url['query'] ?? '';
+//        return home_url($parsed_url['path'] .  $query);
+//    }
+//    add_filter('stylesheet_directory_uri', 'stylesheet_directory_multisite_fix');
+//}
+//
+//if(MULTISITE && !function_exists('plugins_url_fix')) {
+//    function plugins_url_fix( $url )
+//    {
+//        $parsed_url = parse_url($url);
+//        $query = $parsed_url['query'] ?? '';
+//        return home_url($parsed_url['path'] .  $query);
+//    }
+//    add_filter('plugins_url', 'plugins_url_fix');
+//}
 
 // Important to relative url, check later
-if(MULTISITE && !function_exists('network_home_url_fix')) {
-    function network_home_url_fix( $url )
-    {
-        $parsed_url = parse_url($url);
-        $query = $parsed_url['query'] ?? '';
-        return home_url($parsed_url['path'] .  $query);
-    }
-    add_filter('network_home_url', 'network_home_url_fix');
-}
+//if(MULTISITE && !function_exists('network_home_url_fix')) {
+//    function network_home_url_fix( $url )
+//    {
+//        $parsed_url = parse_url($url);
+//        $query = $parsed_url['query'] ?? '';
+//        return home_url($parsed_url['path'] .  $query);
+//    }
+//    add_filter('network_home_url', 'network_home_url_fix');
+//}
 
 
 /**

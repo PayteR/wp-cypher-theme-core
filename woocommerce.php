@@ -20,12 +20,10 @@ if (defined('WC_ABSPATH')) {
      */
     function wc_template_loader(String $template)
     {
-        $yyy = WC()->template_path() . str_replace(WC_ABSPATH . 'templates/', '', $template);
-        $xxx = strpos($template, WC_ABSPATH) === -1
+        return strpos($template, WC_ABSPATH) === -1
             ? $template
             : \Cypher\locate_template(WC()->template_path() . str_replace(WC_ABSPATH . 'templates/', '', $template)) ? :
                 $template;
-        return $xxx;
     }
     add_filter('template_include', __NAMESPACE__ . '\\wc_template_loader', 100, 1);
     add_filter('comments_template', __NAMESPACE__ . '\\wc_template_loader', 100, 1);

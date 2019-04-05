@@ -80,7 +80,7 @@ function is_woocommerce_activated()
  *
  * @return bool
  */
-function is_woocommerce_current()
+function is_woocommerce_any_page()
 {
     if(!is_woocommerce_activated()) {
         return false;
