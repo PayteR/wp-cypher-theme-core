@@ -14,7 +14,7 @@ use Roots\Sage\Container;
  * @param string $title
  */
 $cypher_error = function ($message, $subtitle = '', $title = '') {
-    $title = $title ?: __('Cypher &rsaquo; Error', 'cypher');
+    $title = $title ?: 'Cypher &rsaquo; Error';
     $footer = '<a href="https://roots.io/sage/docs/">roots.io/sage/docs/</a>';
     $message = "<h1>{$title}<br><small>{$subtitle}</small></h1><p>{$message}</p><p>{$footer}</p>";
     wp_die($message, $title);
@@ -24,14 +24,14 @@ $cypher_error = function ($message, $subtitle = '', $title = '') {
  * Ensure compatible version of PHP is used
  */
 if (version_compare('7.1', phpversion(), '>=')) {
-    $cypher_error(__('You must be using PHP 7.1 or greater.', 'cypher'), __('Invalid PHP version', 'cypher'));
+    $cypher_error('You must be using PHP 7.1 or greater.', 'Invalid PHP version');
 }
 
 /**
  * Ensure compatible version of WordPress is used
  */
-if (version_compare('4.7.0', get_bloginfo('version'), '>=')) {
-    $cypher_error(__('You must be using WordPress 4.7.0 or greater.', 'cypher'), __('Invalid WordPress version', 'cypher'));
+if (version_compare('5.0.1', get_bloginfo('version'), '>=')) {
+    $cypher_error('You must be using WordPress 5.0.1 or greater.', 'Invalid WordPress version');
 }
 
 /**
