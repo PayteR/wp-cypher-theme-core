@@ -4,7 +4,6 @@
 @endphp
 
 
-
 <div class="navbar-cart is-desktop">
   <div class="navbar-item is-cart has-dropdown is-hoverable">
     <a href="{{ $link }}" class="navbar-link">
@@ -13,6 +12,7 @@
       <span class="navbar-cart-count">{{ $cart_count }}</span>
       @endif
     </a>
+    @if(!is_cart())
     <div class="navbar-dropdown is-right">
       @if($cart_count)
         {{ \the_widget('WC_Widget_Cart') }}
@@ -21,5 +21,6 @@
  type="submit">{{ __('Go to shop now', 'cypher') }}</a>
       @endif
     </div>
+    @endif
   </div>
 </div>
