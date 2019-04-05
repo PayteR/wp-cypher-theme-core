@@ -18,7 +18,7 @@
         {{ \the_widget('WC_Widget_Cart') }}
       @else
         <a href="{{ $link }}" class="button is-primary"
- type="submit">{{ __('Go to shop now', 'cypher') }}</a>
+ type="submit">{{ __('Go to shop', 'cypher') }}</a>
       @endif
     </div>
     @endif

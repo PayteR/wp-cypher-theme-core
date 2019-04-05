@@ -148,4 +148,20 @@ class Setup
 
         add_action('widgets_init', $function);
     }
+
+    /**
+     * Register sidebars
+     */
+    public static function translations()
+    {
+        add_action('after_setup_theme', function () {
+            load_theme_textdomain('cypher', get_template_directory() . '/lang');
+        });
+
+        if(!is_child_theme()) return;
+
+        add_action('after_setup_theme', function () {
+            load_theme_textdomain('cypher', get_stylesheet_directory() . '/lang');
+        });
+    }
 }
