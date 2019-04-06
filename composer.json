@@ -31,6 +31,7 @@
       "compatibility.php",
       "helpers.php",
       "template.php",
+      "l10n.php",
       "woocommerce.php"
     ]
   }
