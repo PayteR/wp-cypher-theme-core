@@ -127,6 +127,33 @@ function filter_templates($templates)
 }
 
 /**
+ * Get vendor path
+ *
+ * @return string
+ */
+function get_vendor_directory() {
+    return __DIR__;
+}
+
+/**
+ * Return file from vendor path
+ *
+ * @param string $file
+ * @return string
+ */
+function get_vendor_theme_file_path( $file = '' ){
+    $file = ltrim( $file, '/' );
+
+    if ( empty( $file ) ) {
+        $path = get_vendor_directory();
+    } else {
+        $path = get_vendor_directory() . '/' . $file;
+    }
+
+    return $path;
+}
+
+/**
  * @param string $template
  * @param null $type
  * @param string|string[] $templates Possible template files
@@ -143,8 +170,8 @@ function filter_templates_vendor($template = '', $type = null, $templates = [])
         if ( ! $template_name ) {
             continue;
         }
-        if ( file_exists( __DIR__ . '/' . $template_name ) ) {
-            $located = __DIR__ . '/' . $template_name;
+        if ( file_exists( $file = get_vendor_theme_file_path( $template_name ) ) ) {
+            $located = $file;
             break;
         }
     }
