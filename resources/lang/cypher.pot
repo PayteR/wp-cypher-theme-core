@@ -1,0 +1,962 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Cypher theme\n"
+"POT-Creation-Date: 2019-04-06 04:58+0200\n"
+"PO-Revision-Date: 2019-04-05 06:52+0200\n"
+"Last-Translator: \n"
+"Language-Team: Peter PayteR Gašparík\n"
+"Language: sk_SK\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.2.1\n"
+"X-Poedit-KeywordsList: ;__;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,12;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2,;__ngettext_noop:1,2\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n>=2 && n<=4 ? 1 : 2);\n"
+"X-Poedit-Basepath: ../..\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: resources/views/404.blade.php:8
+msgid "Sorry, but the page you were trying to view does not exist."
+msgstr ""
+
+#: resources/views/content/page.blade.php:11
+#: resources/views/content/single.blade.php:11
+msgid "Pages:"
+msgstr ""
+
+#: resources/views/header/partials/cart.blade.php:21
+msgid "Go to shop"
+msgstr ""
+
+#: resources/views/index.blade.php:8 resources/views/search.blade.php:8
+msgid "Sorry, no results were found."
+msgstr ""
+
+#: resources/views/partials/comments.blade.php:21
+msgid "&larr; Older comments"
+msgstr ""
+
+#: resources/views/partials/comments.blade.php:24
+msgid "Newer comments &rarr;"
+msgstr ""
+
+#: resources/views/partials/comments.blade.php:33
+msgid "Comments are closed."
+msgstr ""
+
+#: resources/views/partials/entry-meta.blade.php:3
+msgctxt "post meta"
+msgid "By"
+msgstr ""
+
+#: app/Utilities/Metas.php:38
+msgid "Layout options"
+msgstr ""
+
+#: app/Utilities/Metas.php:43
+msgid "Display title"
+msgstr ""
+
+#: app/Utilities/Metas.php:46 app/Utilities/Metas.php:53
+msgid "Default by theme"
+msgstr ""
+
+#: app/Utilities/Metas.php:47
+msgid "Display"
+msgstr ""
+
+#: app/Utilities/Metas.php:48 app/Utilities/Metas.php:56
+msgid "Hide"
+msgstr ""
+
+#: app/Utilities/Metas.php:50
+msgid "Display sidebar"
+msgstr ""
+
+#: app/Utilities/Metas.php:54
+msgid "Display right"
+msgstr ""
+
+#: app/Utilities/Metas.php:55
+msgid "Display left"
+msgstr ""
+
+#: app/Utilities/Setup.php:72
+msgid "Primary Navigation"
+msgstr ""
+
+#: app/Utilities/Setup.php:76
+msgid "Footer Navigation"
+msgstr ""
+
+#: app/Utilities/Setup.php:140
+msgid "Sidebar widget"
+msgstr ""
+
+#: app/Utilities/Setup.php:144
+msgid "Footer widget"
+msgstr ""
+
+#: app/Utilities/Template.php:48
+msgid "Read more"
+msgstr ""
+
+#: app/Utilities/Template.php:60
+msgid ""
+"You are using an <strong>outdated</strong> browser, you may experience "
+"issues.\n"
+"                Please <a href=\"http://browsehappy.com/\" target=\"_blank"
+"\">upgrade your browser</a> to\n"
+"                improve your experience."
+msgstr ""
+
+#: app/Utilities/Template.php:81
+#, php-format
+msgctxt "privacy policy"
+msgid ""
+"We use cookies on our site to improve your experience of our site. By "
+"clicking on, and continuing to use this site you consent for us to set "
+"cookies in accordance with your current browser settings. Find out more in "
+"our <a href=\"%s\" target=\"_blank\">Cookies Policy</a>"
+msgstr ""
+
+#: app/Utilities/Template.php:82
+msgctxt "privacy policy"
+msgid "Close"
+msgstr ""
+
+#~ msgid "I accept condition, add comment"
+#~ msgstr "Súhlasím s pravidlami, pridať komentár"
+
+#~ msgid "Social comix"
+#~ msgstr "Spoločenský komix"
+
+#~ msgid "Show all social comics"
+#~ msgstr "Zobraziť všetky spoločenské komixy"
+
+#~ msgid "Photogalleries"
+#~ msgstr "Fotogalérie"
+
+#~ msgid "Show all photogalleries"
+#~ msgstr "Zobraziť všetky fotogalérie"
+
+#~ msgid "Article themes"
+#~ msgstr "Témy článkov"
+
+#~ msgid "Podnikam.sk"
+#~ msgstr "Podnikam.sk"
+
+#~ msgid "DamskaJazda.sk"
+#~ msgstr "DamskaJazda.sk"
+
+#~ msgid "Najky.sk"
+#~ msgstr "Najky.sk"
+
+#~ msgid "DobreRadyAnapady.sk"
+#~ msgstr "DobreRadyAnapady.sk"
+
+#~ msgid "MnamkyRecepty.sk"
+#~ msgstr "MnamkyRecepty.sk"
+
+#~ msgid "Autolike.sk"
+#~ msgstr "Autolike.sk"
+
+#~ msgid "Cestujsi.sk"
+#~ msgstr "Cestujsi.sk"
+
+#~ msgid "NajAppky.sk"
+#~ msgstr "NajAppky.sk"
+
+#~ msgid "Venergetike.sk"
+#~ msgstr "Venergetike.sk"
+
+#~ msgid "Vzdravotnictve.sk"
+#~ msgstr "Vzdravotnictve.sk"
+
+#~ msgid "Vofinanciach.sk"
+#~ msgstr "Vofinanciach.sk"
+
+#~ msgid "Nasadoprava.sk"
+#~ msgstr "Nasadoprava.sk"
+
+#~ msgid "vPotravinarstve.sk"
+#~ msgstr "vPotravinarstve.sk"
+
+#~ msgid "nasVidiek.sk"
+#~ msgstr "nasVidiek.sk"
+
+#~ msgid "Sex"
+#~ msgstr "Pohlavie"
+
+#~ msgid "Man"
+#~ msgstr "Muž"
+
+#~ msgid "Woman"
+#~ msgstr "Žena"
+
+#~ msgid "Profestion"
+#~ msgstr "Povolanie"
+
+#~ msgid "District"
+#~ msgstr "Okres"
+
+#~ msgid "Homepage"
+#~ msgstr "Titulka"
+
+#~ msgid "Current topics order"
+#~ msgstr "Zoradenie v Aktuálnych témach v sidebare"
+
+#~ msgid ""
+#~ "If here is any number, this tag will be visible in sidebar. Higher number "
+#~ "goes first."
+#~ msgstr ""
+#~ "Ak je tu nejaké číslo, tento tag bude na viditelný v aktuálnych témach v "
+#~ "sidebare na stránke, Vyššie číslo ide prvé. Ak je prázdne, tak sa "
+#~ "nezobrazí medzi aktuálnymi témami."
+
+#~ msgid "Order on homepage"
+#~ msgstr "Pozícia na titulke"
+
+#~ msgid "Show real author"
+#~ msgstr "Zobraziť skutočného autora"
+
+#~ msgid ""
+#~ "Check this, if real author should be visible on page instead of Webnoviny."
+#~ "sk"
+#~ msgstr ""
+#~ "Ak je zaškrtnuté, tak na stránke bude zobrazený skutočný autor miesto "
+#~ "Webnoviny.sk"
+
+#~ msgid "Top article in category"
+#~ msgstr "Top správa  v kategórii"
+
+#~ msgid "Checked articles are shown first in their category."
+#~ msgstr "Zaškrtnuté články budu vo svojich kategóriách zvýraznené."
+
+#~ msgid "Post filter"
+#~ msgstr "Filter článkov"
+
+#~ msgid ""
+#~ "Customize your homepage for your needs. Select articles that you want to "
+#~ "display:"
+#~ msgstr ""
+#~ "Prispôsobte si titulku podľa vašich predstáv. Vyberte články, ktoré "
+#~ "chcete zobraziť:"
+
+#~ msgid "Time"
+#~ msgstr "Čas"
+
+#~ msgid "Today"
+#~ msgstr "Dnes"
+
+#~ msgid "Yesterday"
+#~ msgstr "Včera"
+
+#~ msgid "Other date"
+#~ msgstr "Iný dátum"
+
+#~ msgid "Category"
+#~ msgstr "Kategória"
+
+#~ msgid "Show all categories"
+#~ msgstr "Všetky správy"
+
+#~ msgid "Send"
+#~ msgstr "Odoslať"
+
+#~ msgid "Logout"
+#~ msgstr "Odhlásiť"
+
+#~ msgid "Login"
+#~ msgstr "Prihlásenie"
+
+#~ msgid "Registration"
+#~ msgstr "Registrácia"
+
+#~ msgid "24h"
+#~ msgstr "24h"
+
+#~ msgid "48h"
+#~ msgstr "48h"
+
+#~ msgid "72h"
+#~ msgstr "72h"
+
+#~ msgid "168h"
+#~ msgstr "168h"
+
+#~ msgid "Articles were assigned"
+#~ msgstr "Články boli priradené"
+
+#~ msgid "Top articles"
+#~ msgstr "Top články"
+
+#~ msgid "Don't miss"
+#~ msgstr "Neprehliadnite"
+
+#~ msgid "Recommended"
+#~ msgstr "Odporúčané články"
+
+#~ msgid "Disabled post"
+#~ msgstr "Nezaradené články"
+
+#~ msgid "Articles assign"
+#~ msgstr "Priradiť článok"
+
+#~ msgid "Assign"
+#~ msgstr "Priradenie"
+
+#~ msgid "Frontend link"
+#~ msgstr "Frontend link"
+
+#~ msgid "CommentID missing"
+#~ msgstr "Chýba CommentID"
+
+#~ msgid "CommentID is not correct"
+#~ msgstr "CommentID  je nesprávny"
+
+#~ msgid "Vote is not correctly formatted."
+#~ msgstr "Hlasovanie nie je správne formátované."
+
+#~ msgid "You have already voted for this comment."
+#~ msgstr "Už ste hlasovali za tento komentár, alebo niekto s rovnakou IP."
+
+#~ msgid "Some error while saving occured. Try again later please."
+#~ msgstr "Nastala nepredvídatelná chyba. Prosím skúste neskôr."
+
+#~ msgid "Check this captcha field as prevention against spam bots"
+#~ msgstr ""
+#~ "Prosím označte políčko nižšie - nie som robot, ktoré chráni diskusiu pred "
+#~ "spamermi"
+
+#~ msgid "This site is saving IP address every comment."
+#~ msgstr ""
+#~ "Webnoviny.sk zaznamenávajú IP adresu každého komentára. Webnoviny.sk "
+#~ "nenesú zodpovednosť za publikované komentáre, zodpovednosť nesie "
+#~ "prispievateľ."
+
+#~ msgid "Breaking news newsletter"
+#~ msgstr "Mimoriadna správa newsletter"
+
+#~ msgid "Checked articles are sent as Breaking news newsletter."
+#~ msgstr ""
+#~ "Zaškrtnuté články budú okamžite odoslané ako email pre newsletter "
+#~ "odberateľov."
+
+#~ msgid "Search: %s"
+#~ msgstr "Vyhladávanie: %s"
+
+#~ msgid "paged %d"
+#~ msgstr "stránka %d"
+
+#~ msgid "Facebook page for statuses"
+#~ msgstr "Facebook stránka pre statusy"
+
+#~ msgid "Show photoalbum for article (click here)"
+#~ msgstr "Prejsť na fotogalériu (kliknite sem)"
+
+#~ msgid "Celebrities on photo"
+#~ msgstr "Osobnosti na fotke"
+
+#~ msgid "photo %d"
+#~ msgstr "fotografia %d"
+
+#~ msgid "Celebrity Photogallery: %s"
+#~ msgstr "Fotogaléria osobnosti: %s"
+
+#~ msgid "Load more images"
+#~ msgstr "Zobraziť ďalšie fotky"
+
+#~ msgid "Celebrities"
+#~ msgstr "Osobnosti"
+
+#~ msgid "Celebrity"
+#~ msgstr "Osobnosť"
+
+#~ msgid "Convert to Celebrity"
+#~ msgstr "Konvertovať na osobnosť"
+
+#~ msgid "Merge to term"
+#~ msgstr "Tento tag sa importuje do: (vlozte sem ID tagu)"
+
+#~ msgid "Show last"
+#~ msgstr "Zobraziť posledné"
+
+#~ msgid "Show alphabetical"
+#~ msgstr "Zobraziť abecedne"
+
+#~ msgid "Horoscope"
+#~ msgstr "Horoskop"
+
+#~ msgid "Horoscopes for today %s"
+#~ msgstr "Horoskopy na dnes %s"
+
+#~ msgid "Horoscope for today %s for zodiac %s"
+#~ msgstr "Horoskop na dnes %s pre znamenie %s"
+
+#~ msgid "Horoscopes for tomorrow %s"
+#~ msgstr "Horoskopy na zajtra %s"
+
+#~ msgid "Horoscope for tomorrow %s for zodiac %s"
+#~ msgstr "Horoskop na zajtra %s pre znamenie %s"
+
+#~ msgid "Weekly horoscope for week %d (%s - %s)"
+#~ msgstr "Týždenný horoskop pre %d. týždeň (%s - %s)"
+
+#~ msgid "Horoscope for week %d (%s - %s) for zodiac %s"
+#~ msgstr "Horoskop pre %d. týždeň (%s - %s) pre znamenie %s"
+
+#~ msgid "Monthly horoscope for month %s"
+#~ msgstr "Mesačný horoskop pre mesiac %s"
+
+#~ msgid "Monthly horoscope for month %s for zodiac %s"
+#~ msgstr "Mesačný horoskop pre mesiac %s pre znamenie %s"
+
+#~ msgid "Aquarius"
+#~ msgstr "Vodnár"
+
+#~ msgid "Pisces"
+#~ msgstr "Ryby"
+
+#~ msgid "Aries"
+#~ msgstr "Baran"
+
+#~ msgid "Taurus"
+#~ msgstr "Býk"
+
+#~ msgid "Gemini"
+#~ msgstr "Blíženci"
+
+#~ msgid "Crayfish"
+#~ msgstr "Rak"
+
+#~ msgid "Leo"
+#~ msgstr "Lev"
+
+#~ msgid "Virgo"
+#~ msgstr "Panna"
+
+#~ msgid "Libra"
+#~ msgstr "Váhy"
+
+#~ msgid "Scorpion"
+#~ msgstr "Škorpión"
+
+#~ msgid "Sagittarius"
+#~ msgstr "Strelec"
+
+#~ msgid "Capricorn"
+#~ msgstr "Kozorožec"
+
+#~ msgid "Horosope for today"
+#~ msgstr "Horoskop na dnes"
+
+#~ msgid "Horosope for tomorrow"
+#~ msgstr "Horoskop na zajtra"
+
+#~ msgid "Week horoscope"
+#~ msgstr "Týždenný horoskop"
+
+#~ msgid "Month horoscope"
+#~ msgstr "Mesačný horoskop"
+
+#~ msgid "Year horoscope"
+#~ msgstr "Ročný horoskop"
+
+#~ msgid "Characteristic"
+#~ msgstr "Charakteristika"
+
+#~ msgid "Horoscopes"
+#~ msgstr "Horoskopy"
+
+#~ msgid "Last Date"
+#~ msgstr "Dátum zobrazenia"
+
+#~ msgid "Horoscope was deleted."
+#~ msgstr "Horoskop bol zmazaný."
+
+#~ msgid "Horoscope was updated."
+#~ msgstr "Horoskop bol upravený."
+
+#~ msgid "Horoscope was added."
+#~ msgstr "Horoskop bol pridaný."
+
+#~ msgid "Horoscope texts for randomly show on page."
+#~ msgstr "Texty pre horoskopy zobrazené na stránke."
+
+#~ msgid "Texts daily"
+#~ msgstr "Texty denné"
+
+#~ msgid "Texts weekly"
+#~ msgstr "Texty týždenné"
+
+#~ msgid "Texts monthly"
+#~ msgstr "Texty mesačné"
+
+#~ msgid "Add New"
+#~ msgstr "Pridať nový"
+
+#~ msgid "Search"
+#~ msgstr "Hľadať"
+
+#~ msgid "Location"
+#~ msgstr "Lokalita"
+
+#~ msgid ""
+#~ "In case foreaign country select country. In Slovak cases select city."
+#~ msgstr ""
+#~ "V prípade zahraničia, vyberte krajinu, o ktorú sa jedná. V prípade SK, "
+#~ "zaškrtnite mesto. Pokial ide o nejednoznacnu lokalitu, napr. pri Lige "
+#~ "majstrov, tak nastavit hlavnu lokalitu, bud Slovensko alebo Svet."
+
+#~ msgid "Start write name of the location..."
+#~ msgstr "Začnite písať názov lokality..."
+
+#~ msgid "Select from most popular:"
+#~ msgstr "Najpoužívanejšie:"
+
+#~ msgid "Add New Social comix"
+#~ msgstr "Pridať nový spoločenský komix"
+
+#~ msgid "New Social comix"
+#~ msgstr "Nový spoločenský komix"
+
+#~ msgid "Edit Social comix"
+#~ msgstr "Upraviť spoločenský komix"
+
+#~ msgid "View Social comix"
+#~ msgstr "Zobraziť spoločenský komix"
+
+#~ msgid "All posts"
+#~ msgstr "Všetky príspevky"
+
+#~ msgid "Search Social comix"
+#~ msgstr "Vyhľadať spoločenský komix"
+
+#~ msgid "Parent Social comix"
+#~ msgstr "Nadradený komix"
+
+#~ msgid "No posts found in Trash."
+#~ msgstr "Židane príspevky v koši."
+
+#~ msgid "socialcomix"
+#~ msgstr "spolocensky-komix"
+
+#~ msgid "WebnovinyTV"
+#~ msgstr "WebnovinyTV"
+
+#~ msgid "Add New WebnovinyTV"
+#~ msgstr "Pridať nové video"
+
+#~ msgid "New WebnovinyTV"
+#~ msgstr "Nové video"
+
+#~ msgid "Edit WebnovinyTV"
+#~ msgstr "Editovať video"
+
+#~ msgid "View WebnovinyTV"
+#~ msgstr "Zobraziť video"
+
+#~ msgid "Search WebnovinyTV"
+#~ msgstr "Vyhľadať video"
+
+#~ msgid "Parent WebnovinyTV"
+#~ msgstr "Nadradené video"
+
+#~ msgid "tv"
+#~ msgstr "tv"
+
+#~ msgid "Articles from locality %s"
+#~ msgstr "Články z lokality %s"
+
+#~ msgid "Show all articles from licality %s"
+#~ msgstr "Zobraziť všetky články z lokality %s"
+
+#~ msgid "Show newer posts from %s"
+#~ msgstr "Zobraziť novšie príspevky z dňa %s"
+
+#~ msgid "%s"
+#~ msgstr "%s"
+
+#~ msgid "Filtering categories: "
+#~ msgstr "Filtrujem kategórie: "
+
+#~ msgid "Remove filter"
+#~ msgstr "Odstrániť filter"
+
+#~ msgid "No posts for date %s."
+#~ msgstr "Žiadne články z dňa %s."
+
+#~ msgid "Show older posts from %s"
+#~ msgstr "Zobraziť staršie články z dňa %s"
+
+#~ msgid "From category %s"
+#~ msgstr "Z kategórie %s"
+
+#~ msgid "Menu"
+#~ msgstr "Menu"
+
+#~ msgid "from"
+#~ msgstr "od"
+
+#~ msgid "Top article"
+#~ msgstr "Top správa"
+
+#~ msgid "Current news"
+#~ msgstr "Najnovšie"
+
+#~ msgid ""
+#~ "Sorry, no results were found. Please send an story for the article on <a "
+#~ "href=\"mailto:%s\">%s</a>"
+#~ msgstr ""
+#~ "Prepáčte, neboli nájdené žiadne výsledky. Pošlite nám námet na článok na "
+#~ "<a href=\"mailto:%s\">%s</a>"
+
+#~ msgid "PSČ"
+#~ msgstr "PSČ"
+
+#~ msgid "Cities and streets"
+#~ msgstr "Mestá a ulice"
+
+#~ msgid "Search by:"
+#~ msgstr "Hľadať podľa:"
+
+#~ msgid "City name"
+#~ msgstr "Mesto/Obec"
+
+#~ msgid "Street name"
+#~ msgstr "Názov ulice"
+
+#~ msgid "Find PSČ"
+#~ msgstr "Vyhľadať PSČ"
+
+#~ msgid "PSČ for city \"%s\" and \"%s\" street"
+#~ msgstr "PSČ pre mesto \"%s\" a ulicu \"%s\""
+
+#~ msgid "Show all streets for city %s"
+#~ msgstr "Zobraziť PSČ pre všetky ulice obce %s"
+
+#~ msgid "Street"
+#~ msgstr "Ulica"
+
+#~ msgid "Post office"
+#~ msgstr "Pošta"
+
+#~ msgid "Detail"
+#~ msgstr "Detail"
+
+#~ msgid "More info"
+#~ msgstr "Viac info"
+
+#~ msgid "No streets found for \"%s\""
+#~ msgstr "Nenájdená ulica pre výraz \"%s\""
+
+#~ msgid "Found cities for \"%s\""
+#~ msgstr "Nájdené mestá pre \"%s\""
+
+#~ msgid "Region"
+#~ msgstr "Kraj"
+
+#~ msgid "You need to specify street. Check lower."
+#~ msgstr "Pozrite zoznam ulíc nižšie."
+
+#~ msgid "No cities found for \"%s\""
+#~ msgstr "Nenájdené mesto pre výraz \"%s\""
+
+#~ msgid "Streets found"
+#~ msgstr "Nájdené ulice"
+
+#~ msgid "Show bigger map"
+#~ msgstr "Zobraziť zväčšenú mapu"
+
+#~ msgid "Insert PSČ"
+#~ msgstr "Napíšte PSČ"
+
+#~ msgid "Find Cities"
+#~ msgstr "Nájsť mestá/obce"
+
+#~ msgid "PSČ %d - Found cities"
+#~ msgstr "PSČ %d - Nájdené mestá"
+
+#~ msgid "PSČ %d - Found streets"
+#~ msgstr "PSČ %d - Nájdené ulice"
+
+#~ msgid "No match found for PSČ %d"
+#~ msgstr "Žiadne výsledky pre PSČ %d"
+
+#~ msgid "Search for text in statuses"
+#~ msgstr "Vyhľadávajte v statusoch"
+
+#~ msgid "Show status on Facebook"
+#~ msgstr "Zobraziť status na Facebooku"
+
+#~ msgid "show more"
+#~ msgstr "zobraziť viac"
+
+#~ msgid "more..."
+#~ msgstr "viac..."
+
+#~ msgid "Newer comix"
+#~ msgstr "Novší komix"
+
+#~ msgid "Older comix"
+#~ msgstr "Starší komix"
+
+#~ msgid "PSC of location %s"
+#~ msgstr "PSČ lokality %s"
+
+#~ msgid "Streets of location %s"
+#~ msgstr "Ulice lokality %s"
+
+#~ msgid "Articles"
+#~ msgstr "Články"
+
+#~ msgid "Discussion"
+#~ msgstr "Diskusia"
+
+#~ msgid "Back to celebrity"
+#~ msgstr "Späť na osobnosť"
+
+#~ msgid "Current topics"
+#~ msgstr "Aktuálne témy"
+
+#~ msgid "Popular for 30 days"
+#~ msgstr "Populárne za 30 dní"
+
+#~ msgid "photogallery"
+#~ msgstr "fotogaléria"
+
+#~ msgid "Tags"
+#~ msgstr "Témy"
+
+#~ msgid "More about celebrities in article"
+#~ msgstr "Viac k osobnosti z článku"
+
+#~ msgid "Most readed"
+#~ msgstr "Najčítanejšie"
+
+#~ msgid "back"
+#~ msgstr "Späť na článok"
+
+#~ msgid "Last comixes"
+#~ msgstr "Posledné komixy"
+
+#~ msgid "Most active politics"
+#~ msgstr "Najaktívnejší politici"
+
+#~ msgid "Most active politic parties"
+#~ msgstr "Najaktívnejšie politické strany"
+
+#~ msgid "Last photos"
+#~ msgstr "Posledné fotky"
+
+#~ msgid "To show photogallery click here"
+#~ msgstr "Prejsť na fotogalériu (kliknite sem)"
+
+#~ msgid "Facebook statuses "
+#~ msgstr "Statusy na facebooku"
+
+#~ msgid "Show all statuses"
+#~ msgstr "Zobraziť všetky statusy"
+
+#~ msgid "Show default"
+#~ msgstr "Zobraziť abecedne"
+
+#~ msgid "Discussion(%s)"
+#~ msgstr "Diskusia(%s)"
+
+#~ msgid "Instructions"
+#~ msgstr "Návod"
+
+#~ msgid "ByvanieJeHra.sk"
+#~ msgstr "ByvanieJeHra.sk"
+
+#~ msgid "BratislavaDen.sk"
+#~ msgstr "BratislavaDen.sk"
+
+#~ msgid "NitraDen.sk"
+#~ msgstr "NitraDen.sk"
+
+#~ msgid "Zdravoteka.sk"
+#~ msgstr "Zdravoteka.sk"
+
+#~ msgid "Back to horosopes for tomorrow %s"
+#~ msgstr "Späť na horoskopy na zajtra %s"
+
+#~ msgid "Back to horosopes for today %s"
+#~ msgstr "Späť na horoskopy pre dnes %s"
+
+#~ msgid "Tomorrow's horoscope for %s"
+#~ msgstr "Zajtrajší horoskop pre %s"
+
+#~ msgid "Show one random horoscope in the widget area"
+#~ msgstr "Zobrazí jeden náhodný horoskop"
+
+#~ msgid "(im) Horoscope Random Widget"
+#~ msgstr "(im) Náhodný horoskop"
+
+#~ msgid "Ads"
+#~ msgstr "Reklamy"
+
+#~ msgid "Add New Ads"
+#~ msgstr "Pridať novú reklamu"
+
+#~ msgid "New Ads"
+#~ msgstr "Nová reklama"
+
+#~ msgid "Edit Ads"
+#~ msgstr "Editovať reklamu"
+
+#~ msgid "View Ads"
+#~ msgstr "Zobraziť reklamu"
+
+#~ msgid "Parent Ads"
+#~ msgstr "Nadradená reklama"
+
+#~ msgid "Discussion for article \"%s\""
+#~ msgstr "Diskusia k článku \"%s\""
+
+#~ msgid "Please insert a correct email address."
+#~ msgstr "Prosím vložte emailovú adresu v správnom formáte."
+
+#~ msgid "News"
+#~ msgstr "Novinky"
+
+#~ msgid "email"
+#~ msgstr "email"
+
+#~ msgid "Show whole discusion"
+#~ msgstr "Zobraziť celú diskusiu"
+
+#~ msgid "No comments yet, you can <a href=\"%s\">Write first comment</a>!"
+#~ msgstr "Zatiaľ žiadne komentáre. <a href=\"%s\">Napíšte prvý komentár</a>!"
+
+#~ msgid "Company Pages"
+#~ msgstr "Stránky spoločnosti"
+
+#~ msgid "Themes"
+#~ msgstr "Témy"
+
+#~ msgid "Class A"
+#~ msgstr "Trieda A"
+
+#~ msgid "Class B"
+#~ msgstr "Trieda B"
+
+#~ msgid "Class C"
+#~ msgstr "Trieda C"
+
+#~ msgid "Class D"
+#~ msgstr "Trieda D"
+
+#~ msgid "I accept condition, add comment to %s"
+#~ msgstr "Súhlasím s pravidlami, pridať komentár k %s"
+
+#~ msgid "Show timeline"
+#~ msgstr "Zobraziť časovú os"
+
+#~ msgid "Similar posts"
+#~ msgstr "Podobné príspevky"
+
+#~ msgid "today"
+#~ msgstr "dnes"
+
+#~ msgid "yesterday"
+#~ msgstr "včera"
+
+#~ msgid "week"
+#~ msgstr "týždeň"
+
+#~ msgid "before"
+#~ msgstr "pred"
+
+#~ msgid "Default class"
+#~ msgstr "Bežný článok"
+
+#~ msgid "Blogs"
+#~ msgstr "Blogy"
+
+#~ msgid "Blog"
+#~ msgstr "Blog"
+
+#~ msgid "blog-category"
+#~ msgstr "kategoria"
+
+#~ msgid "NajkyTV"
+#~ msgstr "NajkyTV"
+
+#~ msgid "Add New NajkyTV"
+#~ msgstr "Pridať nové video"
+
+#~ msgid "New NajkyTV"
+#~ msgstr "Nové video"
+
+#~ msgid "Edit NajkyTV"
+#~ msgstr "Editovať video"
+
+#~ msgid "View NajkyTV"
+#~ msgstr "Zobraziť video"
+
+#~ msgid "Search NajkyTV"
+#~ msgstr "Vyhľadať medzi videami"
+
+#~ msgid "Parent NajkyTV"
+#~ msgstr "Nadradené video"
+
+#~ msgid "You have already voted here"
+#~ msgstr "Už si raz hlasoval"
+
+#~ msgid "Rate as cool"
+#~ msgstr "Ohodnoť ako najviac cool"
+
+#~ msgid "Cool"
+#~ msgstr "Cool"
+
+#~ msgid "Rate as love"
+#~ msgstr "Ohodnoť ako najsladšie"
+
+#~ msgid "Heart"
+#~ msgstr "Srdiečko"
+
+#~ msgid "Rate as wtf"
+#~ msgstr "Ohodnoť ako NAJ WOT DA FAK"
+
+#~ msgid "WTF"
+#~ msgstr "WTF"
+
+#~ msgid "Rate as fail"
+#~ msgstr "Ohodnoť ako najvačší fail"
+
+#~ msgid "Fail"
+#~ msgstr "Fail"
+
+#~ msgid "Rate as funny"
+#~ msgstr "Ohodnoť ako najvtipnejšie"
+
+#~ msgid "LOL"
+#~ msgstr "LOL"
+
+#~ msgid "Show comments"
+#~ msgstr "Zobraziť komentáre"
+
+#~ msgid "Most Cool"
+#~ msgstr "Najviac Cool"
+
+#~ msgid "Most fail"
+#~ msgstr "Najväčší fail"
+
+#~ msgid "Most WTF"
+#~ msgstr "Naj wot da fak"
+
+#~ msgid "Most love"
+#~ msgstr "Najsladšie"
+
+#~ msgid "Most fun"
+#~ msgstr "Najvtipnejšie"
+
+#~ msgid "Share"
+#~ msgstr "Zdieľaj"

@@ -29,7 +29,7 @@ if (post_password_required()) {
   @endif
 
   @if (!comments_open() && get_comments_number() != '0' && post_type_supports(get_post_type(), 'comments'))
-    <div class="alert alert-warning">
+    <div class="notification is-warning">
       {{ __('Comments are closed.', 'cypher') }}
     </div>
   @endif

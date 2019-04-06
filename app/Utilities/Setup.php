@@ -137,11 +137,11 @@ class Setup
                 'after_title' => '</h3 class="widget-title">',
             ];
             register_sidebar([
-                    'name' => __('Primary', 'cypher'),
+                    'name' => __('Sidebar widget', 'cypher'),
                     'id' => 'sidebar-primary',
                 ] + $config);
             register_sidebar([
-                    'name' => __('Footer', 'cypher'),
+                    'name' => __('Footer widget', 'cypher'),
                     'id' => 'sidebar-footer',
                 ] + $config);
         };
@@ -154,14 +154,16 @@ class Setup
      */
     public static function translations()
     {
+        if(is_child_theme()) {
+            add_action('after_setup_theme', function () {
+                load_theme_textdomain('cypher', get_stylesheet_directory() . '/lang');
+            });
+        }
+
         add_action('after_setup_theme', function () {
             load_theme_textdomain('cypher', get_template_directory() . '/lang');
+            load_theme_textdomain('cypher', get_vendor_directory() . '/resources/lang');
         });
 
-        if(!is_child_theme()) return;
-
-        add_action('after_setup_theme', function () {
-            load_theme_textdomain('cypher', get_stylesheet_directory() . '/lang');
-        });
     }
 }

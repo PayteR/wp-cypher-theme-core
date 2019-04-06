@@ -45,7 +45,7 @@ class Template
     public static function excerpt()
     {
         add_filter('excerpt_more', function () {
-            return ' &hellip; <a href="' . get_permalink() . '">' . __('Continued', 'cypher') . '</a>';
+            return ' &hellip; <a href="' . get_permalink() . '">' . __('Read more', 'cypher') . '</a>';
         });
     }
 
@@ -78,8 +78,9 @@ class Template
             get_the_permalink($privacy_page)
             ?><div class="privacy_policy">
                 <div class="privacy_policy-container container">
-                <p class="privacy_policy-message"><?= sprintf( __('We use cookies on our site to improve your experience of our site. By clicking on, and continuing to use this site you consent for us to set cookies in accordance with your current browser settings. Find out more in our <a href="%s" target="_blank">Cookies Policy</a>', 'cypher'), $privacy_page) ?>.</p>
-                <button type="button" class="privacy_policy-button button is-primary"><?= __('Close', 'cypher') ?></button>
+                <p class="privacy_policy-message"><?= sprintf( _x('We use cookies on our site to improve your experience of our site. By clicking on, and continuing to use this site you consent for us to set cookies in accordance with your current browser settings. Find out more in our <a href="%s" target="_blank">Cookies Policy</a>', 'privacy policy', 'cypher'), $privacy_page) ?>.</p>
+                <button type="button" class="privacy_policy-button button is-primary"><?= _x('Close', 'privacy policy', 'cypher')
+                    ?></button>
                 </div>
             </div><?php
 

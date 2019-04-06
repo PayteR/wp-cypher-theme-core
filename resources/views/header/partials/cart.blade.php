@@ -12,7 +12,7 @@
       <span class="navbar-cart-count">{{ $cart_count }}</span>
       @endif
     </a>
-    @if(!is_cart())
+    @if(!is_cart() && !is_checkout())
     <div class="navbar-dropdown is-right">
       @if($cart_count)
         {{ \the_widget('WC_Widget_Cart') }}

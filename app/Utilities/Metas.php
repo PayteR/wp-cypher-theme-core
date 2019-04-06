@@ -35,25 +35,25 @@ class Metas
     {
         self::carbonInit();
 
-        Container::make('post_meta',  __( 'Layout options' ))
+        Container::make('post_meta',  _x( 'Layout options', 'layout meta', 'cypher' ))
             ->set_context('side')
             ->set_priority('low')
             ->set_revisions_disabled(true)
             ->add_fields(array(
-                Field::make( 'select', CYPHER_OPTION_DISPLAY_TITLE, __( 'Display title' ) )
+                Field::make( 'select', CYPHER_OPTION_DISPLAY_TITLE, _x( 'Display title', 'layout meta', 'cypher' ) )
                     ->set_default_value( null )
                     ->set_options( array(
-                        null => __( 'Default by theme' ),
-                        true => __( 'Display' ),
-                        false => __( 'Hide' )
+                        null => _x( 'Default by theme', 'layout meta', 'cypher' ),
+                        true => _x( 'Display', 'layout meta', 'cypher' ),
+                        false => _x( 'Hide', 'layout meta', 'cypher' )
                     ) ),
-                Field::make( 'select', CYPHER_OPTION_DISPLAY_SIDEBAR, __( 'Display sidebar' ) )
+                Field::make( 'select', CYPHER_OPTION_DISPLAY_SIDEBAR, _x( 'Display sidebar', 'layout meta', 'cypher' ) )
                     ->set_default_value( null )
                     ->set_options( array(
-                        null => __( 'Default by theme' ),
-                        'right' => __( 'Display right' ),
-                        'left' => __( 'Display left' ),
-                        false => __( 'Hide' )
+                        null => _x( 'Default by theme', 'layout meta', 'cypher' ),
+                        'right' => _x( 'Display right', 'layout meta', 'cypher' ),
+                        'left' => _x( 'Display left', 'layout meta', 'cypher' ),
+                        false => _x( 'Hide', 'layout meta', 'cypher' )
                     ) )
             ));
 
