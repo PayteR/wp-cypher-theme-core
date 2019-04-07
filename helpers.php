@@ -94,8 +94,9 @@ function filter_templates($templates)
 {
     $paths = apply_filters('cypher/filter_templates/paths', [
         'resources/views',
-        'views',
-        ''
+// ak to tu je, tak to berie resources/index.php pri blogoch, ak to tu nie je to este neviem aky bug
+//        'views',
+//        ''
     ]);
     $paths_pattern = "#^(" . implode('|', $paths) . ")/#";
 
