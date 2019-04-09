@@ -45,11 +45,13 @@ function locate_template($template_names)
             continue;
         }
 
-        if ( file_exists( STYLESHEETPATH . '/' . $template_name ) ) {
-            $located = STYLESHEETPATH . '/' . $template_name;
+        // move to the parent directory is added because STYLESHEETPATH
+        // and TEMPLATEPATH returns not theme root path but /resource/ folder
+        if ( file_exists( STYLESHEETPATH . '/../' . $template_name ) ) {
+            $located = STYLESHEETPATH . '/../' . $template_name;
             break;
-        } elseif ( file_exists( TEMPLATEPATH . '/' . $template_name ) ) {
-            $located = TEMPLATEPATH . '/' . $template_name;
+        } elseif ( file_exists( TEMPLATEPATH . '/../' . $template_name ) ) {
+            $located = TEMPLATEPATH . '/../' . $template_name;
             break;
         } elseif ( file_exists( __DIR__ . '/' . $template_name ) ) {
             $located = __DIR__ . '/' . $template_name;
