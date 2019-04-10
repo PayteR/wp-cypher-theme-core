@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-  @include('partials.page-header')
+  @include('partials.header.page')
 
   @if (!have_posts())
     <div class="alert alert-warning">
@@ -14,7 +14,7 @@
     @include('loop.')
   @endwhile
 
-  {!! get_the_posts_navigation() !!}
+  @php \Cypher\pagination() @endphp
 @endsection
 
 @section('sidebar')

@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Cypher theme\n"
-"POT-Creation-Date: 2019-04-06 04:58+0200\n"
+"POT-Creation-Date: 2019-04-10 05:43+0200\n"
 "PO-Revision-Date: 2019-04-05 06:52+0200\n"
 "Last-Translator: \n"
 "Language-Team: Peter PayteR Gašparík\n"
@@ -23,7 +23,7 @@ msgstr ""
 msgid "Sorry, but the page you were trying to view does not exist."
 msgstr ""
 
-#: resources/views/content/page.blade.php:11
+#: resources/views/content/index.blade.php:11
 #: resources/views/content/single.blade.php:11
 msgid "Pages:"
 msgstr ""
@@ -32,7 +32,7 @@ msgstr ""
 msgid "Go to shop"
 msgstr ""
 
-#: resources/views/index.blade.php:8 resources/views/search.blade.php:8
+#: resources/views/index.blade.php:8
 msgid "Sorry, no results were found."
 msgstr ""
 
@@ -48,40 +48,48 @@ msgstr ""
 msgid "Comments are closed."
 msgstr ""
 
-#: resources/views/partials/entry-meta.blade.php:3
+#: resources/views/partials/entry-meta.blade.php:7
 msgctxt "post meta"
 msgid "By"
 msgstr ""
 
 #: app/Utilities/Metas.php:38
+msgctxt "layout meta"
 msgid "Layout options"
 msgstr ""
 
 #: app/Utilities/Metas.php:43
+msgctxt "layout meta"
 msgid "Display title"
 msgstr ""
 
 #: app/Utilities/Metas.php:46 app/Utilities/Metas.php:53
+msgctxt "layout meta"
 msgid "Default by theme"
 msgstr ""
 
 #: app/Utilities/Metas.php:47
+msgctxt "layout meta"
 msgid "Display"
 msgstr ""
 
 #: app/Utilities/Metas.php:48 app/Utilities/Metas.php:56
+msgctxt "layout meta"
 msgid "Hide"
 msgstr ""
 
 #: app/Utilities/Metas.php:50
+msgctxt "layout meta"
 msgid "Display sidebar"
 msgstr ""
 
 #: app/Utilities/Metas.php:54
+msgctxt "layout meta"
 msgid "Display right"
 msgstr ""
 
 #: app/Utilities/Metas.php:55
+msgctxt "layout meta"
 msgid "Display left"
 msgstr ""
 
@@ -105,7 +113,7 @@ msgstr ""
 msgid "Read more"
 msgstr ""
 
-#: app/Utilities/Template.php:60
+#: app/Utilities/Template.php:61
 msgid ""
 "You are using an <strong>outdated</strong> browser, you may experience "
 "issues.\n"
@@ -114,7 +122,7 @@ msgid ""
 "                improve your experience."
 msgstr ""
 
-#: app/Utilities/Template.php:81
+#: app/Utilities/Template.php:82
 #, php-format
 msgctxt "privacy policy"
 msgid ""
@@ -124,9 +132,22 @@ msgid ""
 "our <a href=\"%s\" target=\"_blank\">Cookies Policy</a>"
 msgstr ""
 
-#: app/Utilities/Template.php:82
+#: app/Utilities/Template.php:83
 msgctxt "privacy policy"
 msgid "Close"
+msgstr ""
+
+#: template.php:107
+msgctxt "pagination"
+msgid "Previous"
+msgstr ""
+
+#: template.php:108 template.php:126 template.php:129
+msgid "Next"
+msgstr ""
+
+#: template.php:119 template.php:121
+msgid "Previous"
 msgstr ""
 
 #~ msgid "I accept condition, add comment"

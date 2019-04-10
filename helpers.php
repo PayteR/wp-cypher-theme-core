@@ -92,7 +92,6 @@ function asset_path($asset)
  */
 function filter_templates($templates)
 {
-
     $paths = apply_filters('cypher/filter_templates/paths', [
         'views', // only views, because it's already under /resources/ folder
     ]);

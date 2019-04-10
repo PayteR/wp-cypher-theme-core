@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Cypher theme\n"
-"POT-Creation-Date: 2019-04-06 05:01+0200\n"
-"PO-Revision-Date: 2019-04-06 05:03+0200\n"
+"POT-Creation-Date: 2019-04-10 05:44+0200\n"
+"PO-Revision-Date: 2019-04-10 05:45+0200\n"
 "Last-Translator: Peter PayteR Gašparík\n"
 "Language-Team: Peter PayteR Gašparík\n"
 "Language: sk\n"
@@ -11,8 +11,8 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 2.2.1\n"
 "X-Poedit-KeywordsList: ;__;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,12;esc_attr__;"
-"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;"
-"_n_noop:1,2;_nx_noop:3c,1,2,;__ngettext_noop:1,2\n"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2,;__ngettext_noop:1,2\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n>=2 && n<=4 ? 1 : 2);\n"
 "X-Poedit-Basepath: ../..\n"
 "X-Poedit-SourceCharset: UTF-8\n"
@@ -22,7 +22,7 @@ msgstr ""
 msgid "Sorry, but the page you were trying to view does not exist."
 msgstr "Ľutujeme, ale hľadaná stránka neexistuje."
 
-#: resources/views/content/page.blade.php:11
+#: resources/views/content/index.blade.php:11
 #: resources/views/content/single.blade.php:11
 msgid "Pages:"
 msgstr "Strany:"
@@ -31,7 +31,7 @@ msgstr "Strany:"
 msgid "Go to shop"
 msgstr "Prejsť do obchodu"
 
-#: resources/views/index.blade.php:8 resources/views/search.blade.php:8
+#: resources/views/index.blade.php:8
 msgid "Sorry, no results were found."
 msgstr "Nenájdené žiadne výsledky."
 
@@ -47,7 +47,7 @@ msgstr "Novšie komentáre &rarr;"
 msgid "Comments are closed."
 msgstr "Komentáre sú uzavreté."
 
-#: resources/views/partials/entry-meta.blade.php:3
+#: resources/views/partials/entry-meta.blade.php:7
 msgctxt "post meta"
 msgid "By"
 msgstr "Od"
@@ -56,6 +56,11 @@ msgstr "Od"
 msgctxt "layout meta"
 msgid "Layout options"
 msgstr "Nastavenie rozloženia"
+
+#: app/Utilities/Metas.php:43
+msgctxt "layout meta"
+msgid "Display title"
+msgstr "Zobraziť nadpis"
 
 #: app/Utilities/Metas.php:46 app/Utilities/Metas.php:53
 msgctxt "layout meta"
@@ -107,7 +112,7 @@ msgstr "Päta widget"
 msgid "Read more"
 msgstr "Zobraziť viac"
 
-#: app/Utilities/Template.php:60
+#: app/Utilities/Template.php:61
 msgid ""
 "You are using an <strong>outdated</strong> browser, you may experience "
 "issues.\n"
@@ -115,12 +120,12 @@ msgid ""
 "\">upgrade your browser</a> to\n"
 "                improve your experience."
 msgstr ""
-"Používate <strong>zastaralý</strong> prehliadač, stránka sa nemusí "
-"zobraziť správne, môže sa zobrazovať pomaly, alebo môžu nastať iné "
-"problémy pri prehliadaní stránky. Odporúčame Vám <a href=\"http://"
-"browsehappy.com/\" target=\"_blank\">stiahnuť si nový prehliadač tu</a>."
+"Používate <strong>zastaralý</strong> prehliadač, stránka sa nemusí zobraziť "
+"správne, môže sa zobrazovať pomaly, alebo môžu nastať iné problémy pri "
+"prehliadaní stránky. Odporúčame Vám <a href=\"http://browsehappy.com/\" "
+"target=\"_blank\">stiahnuť si nový prehliadač tu</a>."
 
-#: app/Utilities/Template.php:81
+#: app/Utilities/Template.php:82
 #, php-format
 msgctxt "privacy policy"
 msgid ""
@@ -129,13 +134,26 @@ msgid ""
 "cookies in accordance with your current browser settings. Find out more in "
 "our <a href=\"%s\" target=\"_blank\">Cookies Policy</a>"
 msgstr ""
-"Na našich stránkach používame súbory cookie na zlepšenie vašich skúseností "
-"s našimi stránkami. Kliknutím na, a naďalej používať túto stránku "
-"súhlasíte, že pre nás nastaviť cookies v súlade s vašimi aktuálnymi "
-"nastaveniami prehliadača. Viac sa dozviete v našich <a href=\"%s\" target="
-"\"_blank\">zásadách používania súborov cookie</a>"
+"Na našich stránkach používame súbory cookie na zlepšenie vašich skúseností s "
+"našimi stránkami. Kliknutím na, a naďalej používať túto stránku súhlasíte, "
+"že pre nás nastaviť cookies v súlade s vašimi aktuálnymi nastaveniami "
+"prehliadača. Viac sa dozviete v našich <a href=\"%s\" target=\"_blank"
+"\">zásadách používania súborov cookie</a>"
 
-#: app/Utilities/Template.php:82
+#: app/Utilities/Template.php:83
 msgctxt "privacy policy"
 msgid "Close"
 msgstr "Zatvoriť"
+
+#: template.php:107 template.php:119 template.php:121
+msgctxt "pagination"
+msgid "Previous"
+msgstr "Predchádzajúca"
+
+#: template.php:108 template.php:126 template.php:129
+msgctxt "pagination"
+msgid "Next"
+msgstr "Nasledujúca"
+
+#~ msgid "Previous"
+#~ msgstr "Predchádzajúca"
