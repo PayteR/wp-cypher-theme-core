@@ -45,7 +45,8 @@ class Template
     public static function excerpt()
     {
         add_filter('excerpt_more', function () {
-            return ' &hellip; <a href="' . get_permalink() . '">' . __('Read more', 'cypher') . '</a>';
+            return ' &hellip; <a class="entry-read_more" href="' . get_permalink() . '">' . __('Read more', 'cypher') .
+                '</a>';
         });
     }
 

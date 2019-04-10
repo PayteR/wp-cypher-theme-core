@@ -92,11 +92,9 @@ function asset_path($asset)
  */
 function filter_templates($templates)
 {
+
     $paths = apply_filters('cypher/filter_templates/paths', [
-        'resources/views',
-// ak to tu je, tak to berie resources/index.php pri blogoch, ak to tu nie je to este neviem aky bug
-//        'views',
-//        ''
+        'views', // only views, because it's already under /resources/ folder
     ]);
     $paths_pattern = "#^(" . implode('|', $paths) . ")/#";
 
@@ -133,7 +131,7 @@ function filter_templates($templates)
  * @return string
  */
 function get_vendor_directory() {
-    return __DIR__;
+    return __DIR__ . '/resources';
 }
 
 /**

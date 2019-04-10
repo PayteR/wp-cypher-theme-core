@@ -1,9 +1,13 @@
-<article @php post_class() @endphp>
+<article @php post_class('entry is-singular is-type-' . get_post_type()) @endphp>
+  @if (Cypher\display_title() && App::title())
   <header>
-    <h2 class="entry-title"><a href="{{ get_permalink() }}">{!! get_the_title() !!}</a></h2>
-    @include('partials/entry-meta')
+    @include('partials.page-header')
   </header>
-  <div class="entry-summary">
-    @php the_excerpt() @endphp
+  @endif
+  <div class="entry-content">
+    @php the_content() @endphp
   </div>
+  <footer>
+    {!! wp_link_pages(['echo' => 0, 'before' => '<nav class="page-nav"><p>' . __('Pages:', 'cypher'), 'after' => '</p></nav>']) !!}
+  </footer>
 </article>

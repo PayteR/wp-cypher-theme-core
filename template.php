@@ -45,16 +45,14 @@ function locate_template($template_names)
             continue;
         }
 
-        // move to the parent directory is added because STYLESHEETPATH
-        // and TEMPLATEPATH returns not theme root path but /resource/ folder
-        if ( file_exists( STYLESHEETPATH . '/../' . $template_name ) ) {
-            $located = STYLESHEETPATH . '/../' . $template_name;
+        if ( file_exists( STYLESHEETPATH . '/' . $template_name ) ) {
+            $located = STYLESHEETPATH . '/' . $template_name;
             break;
-        } elseif ( file_exists( TEMPLATEPATH . '/../' . $template_name ) ) {
-            $located = TEMPLATEPATH . '/../' . $template_name;
+        } elseif ( file_exists( TEMPLATEPATH . '/' . $template_name ) ) {
+            $located = TEMPLATEPATH . '/' . $template_name;
             break;
-        } elseif ( file_exists( __DIR__ . '/' . $template_name ) ) {
-            $located = __DIR__ . '/' . $template_name;
+        } elseif ( file_exists( $file = get_vendor_theme_file_path($template_name) ) ) {
+            $located = $file;
             break;
         } elseif ( file_exists( ABSPATH . WPINC . '/theme-compat/' . $template_name ) ) {
             $located = ABSPATH . WPINC . '/theme-compat/' . $template_name;

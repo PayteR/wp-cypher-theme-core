@@ -1,4 +1,4 @@
-<article @php post_class() @endphp>
+<article @php post_class('entry is-singular is-type-' . get_post_type()) @endphp>
   @if (Cypher\display_title() && App::title())
   <header>
     @include('partials.post-header')

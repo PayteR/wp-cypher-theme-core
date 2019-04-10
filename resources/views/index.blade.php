@@ -10,13 +10,13 @@
     {!! get_search_form(false) !!}
   @endif
 
-  @while (have_posts()) @php the_post() @endphp
-    @include('content.')
+  @while(have_posts()) @php the_post() @endphp
+    @include('loop.')
   @endwhile
 
   {!! get_the_posts_navigation() !!}
 @endsection
 
 @section('sidebar')
-  @include('sidebar.index')
+  @include('sidebar.')
 @endsection
