@@ -1,3 +1,3 @@
 <div class="entry-content">
-  @php the_content() @endphp
+  <?php the_content() ?>
 </div>
