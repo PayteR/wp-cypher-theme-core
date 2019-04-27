@@ -32,10 +32,13 @@ if(!defined("CYPHER_COLOR_BLUE")) define("CYPHER_COLOR_BLUE",  '#3273DC');
 if(!defined("CYPHER_COLOR_PURPLE")) define("CYPHER_COLOR_PURPLE", '#B86BFF');
 if(!defined("CYPHER_COLOR_RED")) define("CYPHER_COLOR_RED", '#FF3860');
 
-if(!defined("CYPHER_SIZE_SMALL")) define("CYPHER_SIZE_SMALL", 12);
-if(!defined("CYPHER_SIZE_NORMAL")) define("CYPHER_SIZE_NORMAL", 16);
-if(!defined("CYPHER_SIZE_MEDIUM")) define("CYPHER_SIZE_MEDIUM", 20);
-if(!defined("CYPHER_SIZE_LARGE")) define("CYPHER_SIZE_LARGE", 36);
+if(!defined("CYPHER_SIZE_7")) define("CYPHER_SIZE_7", 13);
+if(!defined("CYPHER_SIZE_6")) define("CYPHER_SIZE_6", 16);
+if(!defined("CYPHER_SIZE_5")) define("CYPHER_SIZE_5", 20);
+if(!defined("CYPHER_SIZE_4")) define("CYPHER_SIZE_4", 24);
+if(!defined("CYPHER_SIZE_3")) define("CYPHER_SIZE_3", 36);
+if(!defined("CYPHER_SIZE_2")) define("CYPHER_SIZE_2", 40);
+if(!defined("CYPHER_SIZE_1")) define("CYPHER_SIZE_1", 48);
 
 
 class Gutenberg
@@ -160,33 +163,58 @@ class Gutenberg
         $functions = function() {
             add_theme_support('editor-font-sizes', [
                 [
-                    'name' =>  'small',
-                    'shortName' => 'S',
-                    'size' => CYPHER_SIZE_SMALL,
-                    'slug' => 'small',
-                ],
-                [
                     'name' =>  'normal',
-                    'shortName' => 'N',
-                    'size' => CYPHER_SIZE_NORMAL,
+                    'shortName' => 'normal',
+                    'size' => CYPHER_SIZE_6,
                     'slug' => 'normal',
                 ],
                 [
-                    'name' =>  'medium',
-                    'shortName' => 'M',
-                    'size' => CYPHER_SIZE_MEDIUM,
-                    'slug' => 'medium',
+                    'name' =>  'size-7',
+                    'shortName' => '7',
+                    'size' => CYPHER_SIZE_7,
+                    'slug' => 'size-7',
                 ],
                 [
-                    'name' =>  'large',
-                    'shortName' => 'L',
-                    'size' => CYPHER_SIZE_LARGE,
-                    'slug' => 'large',
+                    'name' =>  'size-6',
+                    'shortName' => '6',
+                    'size' => CYPHER_SIZE_6,
+                    'slug' => 'size-6',
+                ],
+                [
+                    'name' =>  'size-5',
+                    'shortName' => '5',
+                    'size' => CYPHER_SIZE_5,
+                    'slug' => 'size-5',
+                ],
+                [
+                    'name' =>  'size-4',
+                    'shortName' => '4',
+                    'size' => CYPHER_SIZE_4,
+                    'slug' => 'size-4',
+                ],
+                [
+                    'name' =>  'size-3',
+                    'shortName' => '3',
+                    'size' => CYPHER_SIZE_3,
+                    'slug' => 'size-3',
+                ],
+                [
+                    'name' =>  'size-2',
+                    'shortName' => '2',
+                    'size' => CYPHER_SIZE_2,
+                    'slug' => 'size-2',
+                ],
+                [
+                    'name' =>  'size-1',
+                    'shortName' => '1',
+                    'size' => CYPHER_SIZE_1,
+                    'slug' => 'size-1',
                 ],
             ]);
         };
 
         add_action('after_setup_theme', $functions , 20);
+//        add_theme_support('disable-custom-font-sizes');
     }
 
     public static function themeSupports()
