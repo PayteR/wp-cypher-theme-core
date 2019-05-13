@@ -15,6 +15,7 @@ use Carbon_Fields\Container;
 use Carbon_Fields\Field;
 
 if(!defined("CYPHER_OPTION_DISPLAY_TITLE")) define("CYPHER_OPTION_DISPLAY_TITLE", "display_title");
+if(!defined("CYPHER_OPTION_SUBTITLE_TEXT")) define("CYPHER_OPTION_SUBTITLE_TEXT", "subtitle_text");
 if(!defined("CYPHER_OPTION_DISPLAY_SIDEBAR")) define("CYPHER_OPTION_DISPLAY_SIDEBAR", "display_sidebar");
 
 class Metas
@@ -47,6 +48,7 @@ class Metas
                         true => _x( 'Display', 'layout meta', 'cypher' ),
                         false => _x( 'Hide', 'layout meta', 'cypher' )
                     ) ),
+                Field::make( 'text', CYPHER_OPTION_SUBTITLE_TEXT, _x( 'Subtitle text', 'layout meta', 'cypher' ) ),
                 Field::make( 'select', CYPHER_OPTION_DISPLAY_SIDEBAR, _x( 'Display sidebar', 'layout meta', 'cypher' ) )
                     ->set_default_value( null )
                     ->set_options( array(
