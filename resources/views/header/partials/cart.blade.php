@@ -8,9 +8,7 @@
   <div class="navbar-item is-cart has-dropdown is-hoverable">
     <a href="{{ $link }}" class="navbar-link">
       <i class="navbar-cart-icon icon fa fa-shopping-cart"></i>
-      @if($cart_count)
       <span class="navbar-cart-count">{{ $cart_count }}</span>
-      @endif
     </a>
     @if(!is_cart() && !is_checkout())
     <div class="navbar-dropdown is-right">

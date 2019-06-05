@@ -59,10 +59,10 @@ class NavWalker extends \Walker_Nav_Menu
     {
         $url = $item->url ?? '';
         $classes = empty($item->classes) ? array() : (array)$item->classes;
-        $class_names = '';
+        $class_names = 'navbar-item-' . $item->ID;
 
         if (in_array('current-menu-item', $classes)) {
-            $class_names .= 'is-active';
+            $class_names .= ' is-active';
         }
 
         $button = sprintf("<a href='%s' class='navbar-item %s'><span class='navbar-label'>%s</span></a>", $url,
@@ -76,10 +76,10 @@ class NavWalker extends \Walker_Nav_Menu
     {
         $url = $item->url ?? '';
         $classes = empty($item->classes) ? array() : (array)$item->classes;
-        $class_names = '';
+        $class_names = 'navbar-item-' . $item->ID;
 
         if (in_array('current-menu-item', $classes)) {
-            $class_names .= 'is-active';
+            $class_names .= ' is-active';
         }
 
         $button = sprintf("<a href='%s' class='navbar-link %s'><span class='navbar-label'>%s</span></a>", $url, $class_names, $item->title);
