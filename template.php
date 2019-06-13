@@ -89,7 +89,6 @@ function is_woocommerce_any_page()
     return is_woocommerce() || is_checkout() || is_cart() || is_account_page();
 }
 
-
 /**
  * Bulma pagination
  * credits to https://github.com/Nicuz/Bulma-WordPress-snippets
@@ -143,3 +142,4 @@ function pagination() {
         echo '</nav>';
     }
 }
+
