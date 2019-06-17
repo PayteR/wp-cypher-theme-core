@@ -103,8 +103,8 @@ function pagination() {
         'current' => max( 1, get_query_var('paged') ),
         'total' => $total_pages,
         'type'  => 'array',
-        'prev_text'    => _x( 'Previous', 'pagination', 'cypher' ),
-        'next_text'    => _x( 'Next', 'pagination', 'cypher'),
+        'prev_text'    => vendor_x( 'Previous', 'pagination', 'cypher' ),
+        'next_text'    => vendor_x( 'Next', 'pagination', 'cypher'),
     ) );
 
     if ( is_array( $pages ) ) {
@@ -115,17 +115,17 @@ function pagination() {
 
         //Disable Previous button if the current page is the first one
         if ($paged == 1) {
-            echo '<a class="pagination-previous" disabled>' . _x( 'Previous', 'pagination', 'cypher' ) . '</a>';
+            echo '<a class="pagination-previous" disabled>' . vendor_x( 'Previous', 'pagination', 'cypher' ) . '</a>';
         } else {
-            echo '<a class="pagination-previous" href="' . get_previous_posts_page_link() . '">' . _x( 'Previous', 'pagination', 'cypher' ) . '</a>';
+            echo '<a class="pagination-previous" href="' . get_previous_posts_page_link() . '">' . vendor_x( 'Previous', 'pagination', 'cypher' ) . '</a>';
         }
 
         //Disable Next button if the current page is the last one
         if ($paged<$total_pages) {
-            echo '<a class="pagination-next" href="' . get_next_posts_page_link() . '">' . _x( 'Next', 'pagination', 'cypher' ) . '</a>
+            echo '<a class="pagination-next" href="' . get_next_posts_page_link() . '">' . vendor_x( 'Next', 'pagination', 'cypher' ) . '</a>
       <ul class="pagination-list">';
         } else {
-            echo '<a class="pagination-next" disabled>' . _x( 'Next', 'pagination', 'cypher' ) . '</a>
+            echo '<a class="pagination-next" disabled>' . vendor_x( 'Next', 'pagination', 'cypher' ) . '</a>
       <ul class="pagination-list">';
         }
 
