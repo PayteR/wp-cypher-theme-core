@@ -76,7 +76,7 @@ class Template
 
             if(!$privacy_page) return;
 
-            get_the_permalink($privacy_page)
+            $privacy_page = get_the_permalink($privacy_page)
             ?><div class="privacy_policy">
                 <div class="privacy_policy-container container">
                 <p class="privacy_policy-message"><?= sprintf( _x('We use cookies on our site to improve your experience of our site. By clicking on, and continuing to use this site you consent for us to set cookies in accordance with your current browser settings. Find out more in our <a href="%s" target="_blank">Cookies Policy</a>', 'privacy policy', 'cypher'), $privacy_page) ?>.</p>
