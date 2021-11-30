@@ -20,9 +20,9 @@ if (defined('WC_ABSPATH')) {
      */
     function wc_template_loader(String $template)
     {
-        return strpos($template, WC_ABSPATH) === -1
+        return (strpos($template, WC_ABSPATH) === -1
             ? $template
-            : \Cypher\locate_template(WC()->template_path() . str_replace(WC_ABSPATH . 'templates/', '', $template)) ? :
+            : \Cypher\locate_template(WC()->template_path() . str_replace(WC_ABSPATH . 'templates/', '', $template))) ? :
                 $template;
     }
     add_filter('template_include', __NAMESPACE__ . '\\wc_template_loader', 100, 1);
