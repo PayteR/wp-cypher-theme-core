@@ -100,7 +100,7 @@ if (!function_exists('add_filter')) {
     add_filter('sober/controller/sage/namespace', function(){
         return '';
     });
-});
+};
 
 Container::getInstance()
     ->bindIf('config', function () {
