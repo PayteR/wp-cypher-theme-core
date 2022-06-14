@@ -96,7 +96,7 @@ if (!function_exists('include_parent_file')) {
 /**
  * Sage default controller backward compatibility fix
  */
-if (!function_exists('add_filter')) {
+if (function_exists('add_filter')) {
     add_filter('sober/controller/sage/namespace', function(){
         return '';
     });
