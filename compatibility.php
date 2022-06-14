@@ -30,7 +30,7 @@ if (version_compare('7.1', phpversion(), '>=')) {
 /**
  * Ensure compatible version of WordPress is used
  */
-if (version_compare('5.0.1', get_bloginfo('version'), '>=')) {
+if (function_exists('get_bloginfo') && version_compare('5.0.1', get_bloginfo('version'), '>=')) {
     $cypher_error('You must be using WordPress 5.0.1 or greater.', 'Invalid WordPress version');
 }
 
