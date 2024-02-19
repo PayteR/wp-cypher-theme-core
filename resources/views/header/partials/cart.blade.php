@@ -1,5 +1,5 @@
 @php $cart = WC()->cart; @endphp
-@php $cart_count = $cart->get_cart_contents_count(); @endphp
+@php $cart_count = $cart ? $cart->get_cart_contents_count() : 0; @endphp
 @php $link = $cart_count ? get_permalink( wc_get_page_id( 'cart' ) ) : get_permalink( wc_get_page_id( 'shop' ) );
 @endphp
 
