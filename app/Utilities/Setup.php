@@ -150,20 +150,30 @@ class Setup
     }
 
     /**
-     * Register sidebars
+     * Load translations
      */
     public static function translations()
     {
-        if(is_child_theme()) {
-            add_action('after_setup_theme', function () {
-                load_theme_textdomain('cypher', get_stylesheet_directory() . '/lang');
-            });
-        }
-
         add_action('after_setup_theme', function () {
+            // Load parent theme translations
             load_theme_textdomain('cypher', get_template_directory() . '/lang');
+            
+            // Load vendor translations
             load_theme_textdomain('cypher', get_vendor_directory() . '/lang');
+            
+            // Load child theme translations if it is a child theme
+            if (is_child_theme()) {
+                load_theme_textdomain('cypher', get_stylesheet_directory() . '/lang');
+            }
         });
+    
+        // Debugging information
+        // add_action('wp_footer', function() {
+        //     echo '<pre>';
+        //     echo 'Current locale: ' . get_locale() . "\n";
+        //     echo 'Translated string: ' . __('Facts about Silybum marianum', 'cypher') . "\n";
+        //     echo '</pre>';
+        // });
 
     }
 }
